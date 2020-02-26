@@ -6,6 +6,7 @@
     <target name="checkstyle">
        <checkstyle config="sun_checks.xml">
        <fileset dir="Sudoku-src" includes="**/*.java"/>
+       <formatter type="xml" toFile="build/checkstyle_errors.xml"/>
        </checkstyle>
     </target>
 
