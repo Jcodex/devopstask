@@ -1,0 +1,33 @@
+<project>
+
+    <target name="clean">
+        <delete dir="/home/vagrant/antbuild/build"/>
+    </target>
+
+    <target name="compile">
+        <mkdir dir="/home/vagrant/antbuild/build/classes"/>
+        <javac srcdir="/home/vagrant/antbuild/gitgud/devopstask-master/Sudoku-src" destdir="build/classes"/>
+    </target>
+
+    <target name="jar">
+        <mkdir dir="/home/vagrant/antbuild/build/jar"/>
+        <jar destfile="/vagrant/sudoku.jar" basedir="build/classes">
+            <manifest>
+                <attribute name="Main-Class" value="oyg.sudoku.CreateSudokuGUI"/>
+            </manifest>
+        </jar>
+    </target>
+    <target name="download">
+       <mkdir dir="/home/vagrant/antbuild/gitgud"/>
+       <get src="https://github.com/Jcodex/devopstask/archive/master.zip" dest="/home/vagrant/antbuild/gitgud"/>
+    </target>
+
+    <target name="mkdir">
+    
+    </target>
+
+    <target name="run">
+        <java jar="/home/vagrant/antbuild/build/jar/HelloWorld.jar" fork="true"/>
+    </target>
+
+</project>
