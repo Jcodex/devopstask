@@ -33,8 +33,4 @@
        <get src="https://github.com/Jcodex/devopstask/archive/master.zip" dest="/home/vagrant/antbuild/gitgud"/>
     </target>
 
-    <target name="run">
-        <java jar="/home/vagrant/antbuild/build/jar/HelloWorld.jar" fork="true"/>
-    </target>
-
 </project>
