@@ -29,8 +29,9 @@
     </target>
 
     <target name="download">
-       <mkdir dir="/home/vagrant/antbuild/gitgud"/>
-       <get src="https://github.com/Jcodex/devopstask/archive/master.zip" dest="/home/vagrant/antbuild/gitgud"/>
+       <get src="https://github.com/Jcodex/devopsant/archive/master.zip" dest="."/>
+       <unzip src="master.zip" dest="."/>
+       <move file="devopsant-master" tofile="Sudoku-src"/>
     </target>
 
 </project>
